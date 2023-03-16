@@ -2,12 +2,20 @@
     margin: 0;
     padding: 0;
 }
+img{
+  width: 250px;
+  height: 250px;
+  
 
+}
 
 header{
 width: 100%;
 height: 100vh;
-text-align: center;
+display: flex;
+
+
+
 }
 
 footer{
@@ -24,6 +32,7 @@ background-color :  rgb( 220,  220,  220 );
 background-color: yellowgreen;
 display: flex;
 align-items: center;
+flex-direction: column;
 }
 
 section:nth-of-type(2){
@@ -37,7 +46,6 @@ section:nth-of-type(2){
     
 }
 
-
 .section {
 width: 100%;
 height: 100vh;
@@ -46,21 +54,30 @@ justify-content:center;
 font-size: 40px;
 position: relative;
 
+}
+
+#section2{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 
 }
+
 #grid {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1fr);
+    width: 100vh;
     padding: 10px;
     text-align: center;
     justify-content: center;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
   }
 
 #grid div {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.5)inset ;
   line-height: 150px;
   font-size: 30px;
   text-align: center;
@@ -92,15 +109,17 @@ html{
 height: 300px;
 width: 300px;
 border: 1px solid black;
-display: flex;
-justify-content: center;
+display:flex ;
+justify-content:center ;
 margin: 15px;
+
 
 }
 header a {
   position: absolute;
   bottom: 0%;
   font-size: 40px;
+  
 }
 
 footer a {
@@ -108,7 +127,17 @@ footer a {
   bottom: 0%;
   font-size: 40px;
 }
-
+@media (min-width: 400px){
+  
+#grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+padding: 10px;
+text-align: center;
+justify-content: center;
+}
+  
 #grid div:first-child{
   grid-column-start: 3;
   grid-column-end:4 ;
@@ -134,3 +163,15 @@ footer a {
   grid-column: 5/ 5;
   grid-row:3 / 3;
 }
+#grid div:hover {
+  transform: rotate(359deg);
+  transform: scale(1.1);
+  
+
+}
+#section1{
+  display: flex;
+  flex-direction: row;}
+} 
+  
+
